@@ -7,5 +7,3 @@ A long-term cybersecurity & cryptography learning repository documenting my prog
 - Keep clean notes, repeatable labs, and solved challenges.
 - Build a public portfolio for internships and junior security roles.
 
-
-## 🗂️ Repository Map
