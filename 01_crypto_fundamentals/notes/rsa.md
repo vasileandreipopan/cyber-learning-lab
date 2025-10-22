@@ -42,8 +42,6 @@ RSA is an **asymmetric cryptographic algorithm** — it uses **two related keys*
 This design allows secure communication **without exchanging any secret key in advance**, 
 making RSA one of the foundations of modern cryptography.
 
----
-
 ### The Core Idea
 
 RSA’s security relies on a one-way mathematical problem:
@@ -60,8 +58,6 @@ n = p \times q
 $$
 
 we can safely publish \( n \) as part of the public key — since finding \( p \) and \( q \) from \( n \) is computationally infeasible.
-
----
 
 ### The Key Relationship
 
@@ -147,14 +143,10 @@ The solution is \( x = 4 \), since \( 3 \times 4 = 12 \equiv 1 \pmod{11} \).
 
 Hence, \( 3^{-1} \equiv 4 \pmod{11} \).
 
----
-
 ### Prime Numbers
 
 Primes are the **foundation of RSA’s security**.  
 A **prime number** is an integer greater than 1 that has no positive divisors other than 1 and itself.
-
----
 
 #### Why Primes Matter
 
@@ -168,8 +160,6 @@ This number \( n \) is easy to compute but extremely hard to factor back into it
 
 Factoring \( n \) into \( p \) and \( q \) is the **RSA problem** — the core security assumption on which RSA is built.
 
----
-
 #### Generating Secure Primes
 
 To ensure security:
@@ -179,13 +169,9 @@ To ensure security:
 
 If primes are poorly chosen or reused, the RSA system can be broken.
 
----
-
 ### Euler’s Totient Function
 
 Euler’s Totient Function, denoted as \( \varphi(n) \), counts the number of integers less than \( n \) that are **coprime** to \( n \) (i.e., share no common divisor other than 1).
-
----
 
 #### Definition
 
@@ -200,8 +186,6 @@ For a product of **two distinct primes** \( p \) and \( q \) (as in RSA):
 $$
 \varphi(n) = \varphi(p \times q) = (p - 1)(q - 1)
 $$
-
----
 
 #### Example
 
@@ -219,8 +203,6 @@ $$
 $$
 
 So there are 72 integers between 1 and 91 that are coprime with 91.
-
----
 
 #### Connection to RSA
 
@@ -251,8 +233,6 @@ M^{e \times d} \equiv M \pmod{n}
 $$
 
 This guarantees that encryption followed by decryption (or vice versa) always recovers the original message.
-
----
 
 ### Summary of Key Relationships
 
