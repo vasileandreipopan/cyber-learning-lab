@@ -89,14 +89,10 @@ Before understanding RSA’s algorithm and security, we need to understand the n
 
 At the heart of RSA lies **modular arithmetic** — a system that enables mathematical operations to be performed efficiently even with extremely large numbers.
 
----
-
 ### Modular Arithmetic
 
 RSA operates entirely in the realm of **modular arithmetic** — arithmetic where numbers “wrap around” after reaching a certain value \( n \).  
 This is often described as **clock arithmetic**.
-
----
 
 #### Definition
 
@@ -107,8 +103,6 @@ a \equiv b \pmod{n} \quad \text{if and only if} \quad n \mid (a - b)
 $$
 
 This means \( a \) and \( b \) differ by a multiple of \( n \).
-
----
 
 #### Operations in Modular Arithmetic
 
@@ -127,8 +121,6 @@ $$
 $$
 
 These properties allow RSA to perform encryption and decryption efficiently using **modular exponentiation**.
-
----
 
 #### Modular Inverse
 
