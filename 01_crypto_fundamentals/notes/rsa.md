@@ -29,9 +29,7 @@ RSA is essential for:
 In this document, you’ll explore:
 - The mathematics and logic behind RSA  
 - How keys are generated, used, and attacked  
-- Real-world implementations and CTF applications  
-- Common vulnerabilities and exploitation techniques  
-- Tools and resources to master RSA both in theory and practice  
+- Common vulnerabilities and exploitation techniques   
 
 ---
 
