@@ -57,7 +57,7 @@ $$
 n = p \times q
 $$
 
-we can safely publish \( n \) as part of the public key — since finding \( p \) and \( q \) from \( n \) is computationally infeasible.
+We can safely publish \( n \) as part of the public key — since finding \( p \) and \( q \) from \( n \) is computationally infeasible.
 
 ### The Key Relationship
 
@@ -75,8 +75,7 @@ Where:
 -  φ(n) — Euler’s Totient function, calculated as φ(n) = (p - 1)(q - 1)
 
 
-This means that \( d \) is the **modular inverse** of \( e \) modulo φ(n),  
-ensuring that decryption perfectly reverses encryption.
+This means that \( d \) is the **modular inverse** of \( e \) modulo φ(n), ensuring that decryption perfectly reverses encryption.
 
 ---
 
@@ -85,11 +84,11 @@ ensuring that decryption perfectly reverses encryption.
 Before understanding RSA’s algorithm and security, we need to understand the number theory concepts it relies on:
 **modular arithmetic**, **prime numbers**, and **Euler’s Totient Function**.
 
-At the heart of RSA lies **modular arithmetic** — a system that enables mathematical operations to be performed efficiently even with extremely large numbers.
+At the heart of RSA lies **modular arithmetic**, a system that enables mathematical operations to be performed efficiently even with extremely large numbers.
 
 ### Modular Arithmetic
 
-RSA operates entirely in the realm of **modular arithmetic** — arithmetic where numbers “wrap around” after reaching a certain value \( n \).  
+RSA operates entirely in the realm of **modular arithmetic**, arithmetic where numbers “wrap around” after reaching a certain value   \( n \).  
 This is often described as **clock arithmetic**.
 
 #### Definition
@@ -120,30 +119,41 @@ $$
 
 These properties allow RSA to perform encryption and decryption efficiently using **modular exponentiation**.
 
-#### Modular Inverse
+### Modular Inverse
 
-The **modular inverse** of \( a \) (mod \( n \)) is a number \( a^{-1} \) such that:
+The **modular inverse** of `a (mod n)` is a number `a_inv` such that:
 
-$$
-a \times a^{-1} \equiv 1 \pmod{n}
-$$
+> a × a_inv ≡ 1 (mod n)
 
-This inverse exists **if and only if** \( \gcd(a, n) = 1 \).  
-In RSA, the private exponent \( d \) is the modular inverse of \( e \) modulo \( \varphi(n) \).
+This inverse exists **if and only if** `gcd(a, n) = 1`.
 
-**Example:**
+In RSA, the private exponent `d` is the modular inverse of `e` modulo `φ(n)`  
+(where `φ(n)` = (p - 1) × (q - 1)).
 
-Find the modular inverse of \( a = 3 \) modulo \( n = 11 \).
+---
 
-We seek \( x \) such that:
+#### Example
 
-$$
-3x \equiv 1 \pmod{11}
-$$
+Find the modular inverse of `a = 3` modulo `n = 11`.
 
-The solution is \( x = 4 \), since \( 3 \times 4 = 12 \equiv 1 \pmod{11} \).
+We need to find `x` such that:
 
-Hence, \( 3^{-1} \equiv 4 \pmod{11} \).
+> 3x ≡ 1 (mod 11)
+
+Try values of `x`:
+
+| x     | 3×x   | 3×x mod 11    |
+|:-----:|:-----:|:-------------:|
+| 1     | 3     | 3             |
+| 2     | 6     | 6             |
+| 3     | 9     | 9             |
+| 4     | 12    | **1** ✅      |
+
+So the solution is **x = 4**, since `3 × 4 = 12 ≡ 1 (mod 11)`.
+
+Hence, the modular inverse of 3 modulo 11 is **4**.
+
+> 3⁻¹ ≡ 4 (mod 11)
 
 ### Prime Numbers
 
