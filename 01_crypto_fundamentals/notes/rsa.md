@@ -86,6 +86,8 @@ Before understanding RSA’s algorithm and security, we need to understand the n
 
 At the heart of RSA lies **modular arithmetic**, a system that enables mathematical operations to be performed efficiently even with extremely large numbers.
 
+---
+
 ### Modular Arithmetic
 
 RSA operates entirely in the realm of **modular arithmetic**, arithmetic where numbers “wrap around” after reaching a certain value   \( n \).  
@@ -119,6 +121,8 @@ $$
 
 These properties allow RSA to perform encryption and decryption efficiently using **modular exponentiation**.
 
+---
+
 ### Modular Inverse
 
 The **modular inverse** of `a (mod n)` is a number `a_inv` such that:
@@ -129,8 +133,6 @@ This inverse exists **if and only if** `gcd(a, n) = 1`.
 
 In RSA, the private exponent `d` is the modular inverse of `e` modulo `φ(n)`  
 (where `φ(n)` = (p - 1) × (q - 1)).
-
----
 
 #### Example
 
@@ -154,6 +156,8 @@ So the solution is **x = 4**, since `3 × 4 = 12 ≡ 1 (mod 11)`.
 Hence, the modular inverse of 3 modulo 11 is **4**.
 
 > 3⁻¹ ≡ 4 (mod 11)
+
+---
 
 ### Prime Numbers
 
@@ -245,6 +249,8 @@ M^{e \times d} \equiv M \pmod{n}
 $$
 
 This guarantees that encryption followed by decryption (or vice versa) always recovers the original message.
+
+---
 
 ### Summary of Key Relationships
 
