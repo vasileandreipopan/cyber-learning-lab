@@ -51,7 +51,7 @@ RSA’s security relies on a one-way mathematical problem:
 > It’s easy to multiply two large prime numbers, but extremely difficult to factor their product back into those primes.
 
 This difficulty is known as the **integer factorization problem**, which forms the mathematical backbone of RSA’s security.  
-(Think of it as mixing two paint colors — easy to mix, nearly impossible to separate back into the originals.)
+(Think of it as mixing two paint colors, easy to mix, nearly impossible to separate back into the originals.)
 
 If we take two large prime numbers \( p \) and \( q \) and compute:
 
