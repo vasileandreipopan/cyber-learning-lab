@@ -8,11 +8,8 @@
 4. Key Generation Explained
 5. Encryption Process
 6. RSA in Real-World Security
-7. RSA in CTFs
-8. Common Vulnerabilities and Attacks
-9. Decrypting/Cracking RSA 
-10. Tools and resources
-11. References & Useful Links
+7. Common Vulnerabilities and Attacks
+8. Glossary of Terms
 
 ---
 
@@ -1013,6 +1010,9 @@ A 512-bit RSA modulus can be factored in seconds using modern CPUs.
 - Use trusted crypto libraries (OpenSSL, GnuPG, PyCryptodome).
 
 ---
+
+
+
 
 ## Glossary of Terms
 
