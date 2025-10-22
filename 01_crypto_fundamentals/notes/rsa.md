@@ -68,13 +68,14 @@ $$
 (e \times d) \bmod \varphi(n) = 1
 $$
 
-**Where:**
+Where:
 
-- **\( e \)** — public exponent  
-- **\( d \)** — private exponent  
-- **\( \varphi(n) \)** — Euler’s Totient function, calculated as \( \varphi(n) = (p - 1)(q - 1) \)
+- \( e \) → public exponent  
+- \( d \) → private exponent  
+-  φ(n) — Euler’s Totient function, calculated as φ(n) = (p - 1)(q - 1)
 
-This means that \( d \) is the **modular inverse** of \( e \) modulo \( \varphi(n) \),
+
+This means that \( d \) is the **modular inverse** of \( e \) modulo φ(n),  
 ensuring that decryption perfectly reverses encryption.
 
 ---
