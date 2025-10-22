@@ -18,7 +18,7 @@
 RSA (Rivest–Shamir–Adleman) is one of the most widely used **public-key cryptosystems** in modern cryptography.  
 It provides **confidentiality (via encryption), and integrity/authentication (via digital signatures)** depending on how it's used.
 
-Unlike symmetric encryption (where the same key is used for both encryption and decryption), RSA is **asymmetric** — it uses a **public key** for encryption and a **private key** for decryption.
+Unlike symmetric encryption (where the same key is used for both encryption and decryption), RSA is **asymmetric**, it uses a **public key** for encryption and a **private key** for decryption.
 
 RSA is essential for:
 - Secure data transmission (e.g., HTTPS, email encryption)
@@ -69,9 +69,11 @@ $$
 $$
 
 Where:
+$$
 - \( e \) → public exponent  
 - \( d \) → private exponent  
 - \( \varphi(n) \) → Euler’s Totient function, calculated as \( \varphi(n) = (p - 1)(q - 1) \)
+$$
 
 This means that \( d \) is the **modular inverse** of \( e \) modulo \( \varphi(n) \),  
 ensuring that decryption perfectly reverses encryption.
